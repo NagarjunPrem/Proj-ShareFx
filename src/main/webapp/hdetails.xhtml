@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+  <h:head>
+	<title>Hobby Details</title>         
+          
+</h:head>
+
+<h:body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
+  <a class="navbar-brand" href="#">ShareFx</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Share Hobbies - <span class="sr-only">Stfx</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"> Logged in User: <a><h:outputText style="color:white" value="#{sessionScope.userActive}" /></a></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">User ID : <a><h:outputText style="color:white" value="#{sessionScope.userId}" /></a></a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="#">Hobby Id: <a><h:outputText style="color:white" value="#{sessionScope.hid}" /></a></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <br></br>
+    <h:form>
+        <input type="button" class="btn btn-warning" value="Back" onclick="window.location.href='http://localhost:8080/Proj-Sharefx/faces/shareHobbies.xhtml'" style="float: left; width:250px; height:50px"/> 
+        <h:commandButton class="btn btn-danger" value="Logout" action="#{logout.logout()}" style="float: right; width:250px; height:50px"></h:commandButton>    
+        </h:form>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+          </link>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+               <br></br>
+               <div align="center">
+<center>
+        <h2>Hobby Details</h2>
+    <br></br>
+    <br></br>
+    <br>
+    </br>
+</center>
+    <br></br>
+    <br></br>
+    <div class="container bg-light">
+        <h:dataTable value="#{hdetails.hobby}" var="h" class="table" border="2" frame="border" width="80em">
+	
+             <h:column>
+			<f:facet name="header">Post Title</f:facet>
+                        #{h.hname}
+                                 
+            </h:column>
+             <h:column>
+			<f:facet name="header">Scheduled Date</f:facet>
+                        #{h.hdate}
+                                 
+            </h:column>
+             <h:column>
+			<f:facet name="header">Details</f:facet>
+                        #{h.hinfo}
+                             
+            </h:column>
+             <h:column>
+			<f:facet name="header">Location</f:facet>
+                        #{h.hlocation}                                 
+            </h:column>
+            <h:column>
+			<f:facet name="header">Contact Person</f:facet>
+                        #{h.hcontact}                                 
+            </h:column>
+            </h:dataTable>	 
+       <br></br> 
+       <h2>Hobby Comments</h2>
+       <div class="container bg-light">
+           <h:dataTable value="#{hdetails.hobbycomments}" var="commenthobby" class="table" border="2" width="200px" style="align-content: center" frame="border">
+           <h:column>
+			<f:facet name="header">User Id:</f:facet>
+                        #{commenthobby.uid}                                 
+            </h:column>
+           <h:column>
+			<f:facet name="header">User Name:</f:facet>
+                        #{commenthobby.username}                                 
+            </h:column>
+             <h:column>
+			<f:facet name="header">Comments</f:facet>
+                        #{commenthobby.comment}                                 
+            </h:column>           
+        </h:dataTable>	 
+       <br></br> 
+       </div>
+    </div>
+           
+       <h:form>
+            <input type="button" class="btn btn-success" value="Post a Comment" onclick="window.location.href='http://localhost:8080/Proj-Sharefx/faces/addHobbyComment.xhtml?rid=#{sessionScope.hid}'+'&amp;userid=#{sessionScope.userId}'" />  
+       </h:form>  
+       </div>
+</h:body>   
+       
+</html>

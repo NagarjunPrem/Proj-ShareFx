@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    
+    <h:head>
+	<title>ShareFx</title>
+       
+        </h:head>
+<center>
+<h:body>
+    <div>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
+  <a class="navbar-brand" href="#">ShareFx</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"> Logged in User: <a><h:outputText style="color:white" value="#{sessionScope.userActive}" /></a></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">User ID : <a><h:outputText style="color:white" value="#{sessionScope.userId}" /></a></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+        <br></br>
+     <h:form>
+        <h:commandButton class="btn btn-danger" value="Logout" action="#{logout.logout()}" style="float: right; width:250px; height:50px"></h:commandButton>    
+        </h:form>
+  
+    </div>
+</h:body>
+    <h:body>
+        <div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+          </link>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        </div>
+</h:body>
+    <h:body>
+        <h:form>
+        <style type="text/css">
+        p {
+            line-height: 1.5;
+            margin: 0;
+          }
+    </style>
+ <table>
+     <tr>  
+         <td>
+    <p:card style="width: 25em">
+    <f:facet name="header">
+        <img alt="user header" src="C:\Users\Nagarjun Prem\Desktop\11_ride.jpg"/>
+    </f:facet>
+    <f:facet name="title">
+        <center>ShareFx Rides</center>
+    </f:facet>
+    <f:facet name="subtitle">
+        <center>Share free rides with Stfx</center>
+    </f:facet>
+        <p><center>Find a carpool buddy for your daily commute at no cost</center></p>
+    <f:facet name="footer">
+        <center>
+        <p:commandButton icon="pi pi-help" value="Explore ShareFx Rides" action="shareRides" />
+        </center>
+    </f:facet>
+ </p:card>
+    </td>
+         <td></td>
+            <br></br>
+            <br></br>
+    <td>      
+    <p:card style="width: 25em">
+    <f:facet name="header">
+        <img alt="user header" src="C:\Users\Nagarjun Prem\Desktop\3_Hobbies.png"/>
+    </f:facet>
+    <f:facet name="title">
+        <center>ShareFx Hobbies</center>
+    </f:facet>
+    <f:facet name="subtitle">
+        <center>Share your Hobbies with Stfx</center>
+    </f:facet>
+        <p><center>Meet people who share your hobbies and discover plans and events at our Stfx</center></p>
+    <f:facet name="footer">
+        <center>
+        <p:commandButton icon="pi pi-help" value="Explore ShareFx Hobbies" action="shareHobbies" />
+        </center>
+    </f:facet>
+</p:card>
+    </td>
+    </tr>
+             <br></br>
+            <br></br>
+            <tr> 
+                <td>         
+    <p:card style="width: 25em">
+    <f:facet name="header">
+        <img alt="user header" src="C:\Users\Nagarjun Prem\Desktop\4_knowledge.jpeg"/>
+    </f:facet>
+    <f:facet name="title">
+        <center>ShareFx Skills</center>
+    </f:facet>
+    <f:facet name="subtitle">
+        <center>Share your Skills and Knowledge with Stfx</center>
+    </f:facet>
+        <p><center>Collaborate and build collective knowledge for a better tomorrow</center></p>
+    <f:facet name="footer">
+        <center>
+        <p:commandButton icon="pi pi-help" value="Explore ShareFx Skills" action="shareSkills" />
+        </center>
+    </f:facet>
+</p:card>
+                </td><td></td>
+            <br></br>
+            <br></br>
+            <td>       
+    <p:card style="width: 25em">
+    <f:facet name="header">
+        <img alt="user header" src="C:\Users\Nagarjun Prem\Desktop\2_food.jpg"/>
+    </f:facet>
+    <f:facet name="title">
+        <center>ShareFx Food</center>
+    </f:facet>
+    <f:facet name="subtitle">
+        <center>Share Delicious Food with Stfx</center>
+    </f:facet>
+        <p><center>Taste different cuisines and eliminate good food wastage</center></p>
+    <f:facet name="footer">
+        <center>
+            <p:commandButton icon="pi pi-help" value="Explore ShareFx Food" action="shareFood" /></center>
+    </f:facet>
+</p:card>
+            </td>
+            </tr>
+ </table>
+            </h:form>
+    </h:body>
+        </center>
+</html>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"          
+      xmlns:p="http://primefaces.org/ui">
+    
+    <h:head>
+	<title>Post a Hobby</title>
+        </h:head>
+    <h:body>
+        <h:body>
+    <body>
+         <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
+  <a class="navbar-brand" href="#">ShareFx</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Share Hobbies - <span class="sr-only" ">Stfx</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"> Logged in User: <a><h:outputText style="color:white" value="#{sessionScope.userActive}" /></a></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">User ID : <a><h:outputText style="color:white" value="#{sessionScope.userId}" /></a></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+        <br></br>
+     <h:form>
+         <h:commandButton class="btn btn-warning" value="Back" action="shareHobbies" style="float: left; width:250px; height:50px"></h:commandButton>
+        <h:commandButton class="btn btn-danger" value="Logout" action="#{logout.logout()}" style="float: right; width:250px; height:50px"></h:commandButton>    
+        </h:form>
+    <br></br>
+    <br></br>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+          </link>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        
+    </script>
+    <br></br>
+    </body>
+ </h:body>
+        <br></br>
+        <br></br>
+        <center><h1>Post a Hobby</h1>
+        <h3>Please fill the below Hobby Details:</h3></center>
+        <br></br>        
+<f:view>
+<h:form>
+    <div class="container bg-light">
+        <center>
+<table>
+<tr>
+<td> <h:messages showDetail="true" /> </td>
+</tr>
+<tr>
+<td><h:outputText value="Hobby Title : " /></td>
+<td><p:inputTextarea rows="1" cols="100" value="#{addhobby.hname}" /></td>
+</tr>
+<tr>
+<td><h:outputText value="Scheduled Date : "/></td>
+<td><h:inputTextarea rows="1" cols="25" value="#{addhobby.hdate}"/>
+</td>
+</tr>
+<tr>
+<td><h:outputText value="Scheduled Time : "/></td>
+<td><h:inputTextarea rows="1" cols="25" value="#{addhobby.htime}"/>
+</td>
+</tr>
+ <tr>
+<td><h:outputText value="Note : "/></td>
+<td><p:inputTextarea rows="10" cols="100" value="#{addhobby.hinfo}" /></td>
+</tr>
+<tr>
+<td><h:outputText value="Location : "/></td>
+<td><p:inputTextarea rows="1" cols="100" value="#{addhobby.hlocation}" /></td>
+</tr>
+<tr>
+<td><h:outputText value="Contact : "/></td>
+<td><p:inputTextarea rows="1" cols="100" value="#{addhobby.hcontact}" /></td>
+</tr>
+</table>
+<center>
+    <br></br>
+    <h:commandButton class="btn btn-success" value="Post" action="#{addhobby.setHobby()}" onclick="loginSuccess.xhtml">
+    </h:commandButton>
+    <br></br>
+    <br></br>
+</center>
+        </center>
+    </div>
+</h:form>
+</f:view>
+</h:body>
+</html>
