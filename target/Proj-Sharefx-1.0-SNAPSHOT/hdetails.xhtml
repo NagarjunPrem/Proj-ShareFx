@@ -12,7 +12,7 @@ and open the template in the editor.
       xmlns:p="http://primefaces.org/ui"
       >
   <h:head>
-	<title>Hobby Details</title>         
+      <title>Hobby Details</title>         
           
 </h:head>
 
@@ -96,7 +96,7 @@ and open the template in the editor.
             </h:column>
             </h:dataTable>	 
        <br></br> 
-       <h2>Hobby Comments</h2>
+       <h2>Comments</h2>
        <div class="container bg-light">
            <h:dataTable value="#{hdetails.hobbycomments}" var="commenthobby" class="table" border="2" width="200px" style="align-content: center" frame="border">
            <h:column>
@@ -117,7 +117,7 @@ and open the template in the editor.
     </div>
            
        <h:form>
-            <input type="button" class="btn btn-success" value="Post a Comment" onclick="window.location.href='http://localhost:8080/Proj-Sharefx/faces/addHobbyComment.xhtml?rid=#{sessionScope.hid}'+'&amp;userid=#{sessionScope.userId}'" />  
+            <input type="button" class="btn btn-success" value="Post a Comment" onclick="window.location.href='http://localhost:8080/Proj-Sharefx/faces/addHobbyComment.xhtml?hid=#{sessionScope.hid}'+'&amp;userid=#{sessionScope.userId}'" />  
        </h:form>  
        </div>
 </h:body>   

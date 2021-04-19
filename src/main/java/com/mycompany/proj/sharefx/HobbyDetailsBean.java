@@ -156,7 +156,7 @@ public class HobbyDetailsBean implements Serializable{
      
      public List<HobbyComments> getHobbycomments() throws ClassNotFoundException, SQLException{
          
-         FacesContext context = FacesContext.getCurrentInstance();
+        FacesContext context = FacesContext.getCurrentInstance();
         Map<String, String> paramMap = context.getExternalContext().getRequestParameterMap();
         String hobbyId = paramMap.get("hid");
        

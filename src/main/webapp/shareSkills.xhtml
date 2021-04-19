@@ -15,8 +15,9 @@ and open the template in the editor.
         <title>Share Skills</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
+    <h:body>
     <body>
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg  ">
   <a class="navbar-brand" href="#">ShareFx</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,7 +25,7 @@ and open the template in the editor.
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Share Skills<span class="sr-only">ShareFx</span></a>
+        <a class="nav-link" href="#">Share Skills - <span class="sr-only">ShareFx</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"> Logged in User: <a><h:outputText style="color:white" value="#{sessionScope.userActive}" /></a></a>
@@ -57,7 +58,45 @@ and open the template in the editor.
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
         
     </script>
-        <div>Share Skills</div>
-        <img alt="user header" src="C:\Users\Nagarjun Prem\Desktop\comingsoon.gif"/>
+    <center>
+        <h2>Share Skills</h2>
+        <br></br>
+    <br></br>
+    <h:form>
+        <h:commandButton class="btn btn-primary" value="New Post" action="addSkill" style="width:250px;height:50px"></h:commandButton>    
+    </h:form>
+    <br>
+    </br>
+    </center>
+    <br></br>
+    <br></br>
+    <div class="container bg-light">
+        <h:dataTable value="#{skillBean.skill}" var="item" class="table" border="2" frame="border" width="80em">
+            <h:column>
+			<f:facet name="header">Skill ID</f:facet>
+                        #{item.sid}
+                                 
+                </h:column>
+             <h:column>
+			<f:facet name="header">Post Skill</f:facet>
+                        #{item.sname}
+                                 
+            </h:column>
+             <h:column>
+			<f:facet name="header">Scheduled Date</f:facet>
+                        #{item.sdate}
+                                 
+            </h:column>
+             <h:column>
+			<f:facet name="header">Details</f:facet>
+                        #{item.sinfo}
+                             
+            </h:column>
+             <h:column>                
+            <input type="button" class="btn btn-success" value="View more Details" onclick="window.location.href='http://localhost:8080/Proj-Sharefx/faces/sdetails.xhtml?sid=#{item.sid}'" />   
+            </h:column>
+            </h:dataTable>    
+    </div>
     </body>
+    </h:body>
 </html>

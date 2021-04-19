@@ -12,7 +12,7 @@ and open the template in the editor.
       xmlns:p="http://primefaces.org/ui">
     
     <h:head>
-	<title>Post a Hobby</title>
+        <title>Post a Hobby</title>
         </h:head>
     <h:body>
         <h:body>
@@ -25,7 +25,7 @@ and open the template in the editor.
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Share Hobbies - <span class="sr-only" ">Stfx</span></a>
+        <a class="nav-link" href="#">Share Hobbies - <span class="sr-only">Stfx</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"> Logged in User: <a><h:outputText style="color:white" value="#{sessionScope.userActive}" /></a></a>
@@ -79,12 +79,12 @@ and open the template in the editor.
 <td><p:inputTextarea rows="1" cols="100" value="#{addhobby.hname}" /></td>
 </tr>
 <tr>
-<td><h:outputText value="Scheduled Date : "/></td>
+<td><h:outputText value="Scheduled Date in (YYYY/MM/DD): "/></td>
 <td><h:inputTextarea rows="1" cols="25" value="#{addhobby.hdate}"/>
 </td>
 </tr>
 <tr>
-<td><h:outputText value="Scheduled Time : "/></td>
+<td><h:outputText value="Scheduled Time in (HH:MM:SS)): "/></td>
 <td><h:inputTextarea rows="1" cols="25" value="#{addhobby.htime}"/>
 </td>
 </tr>
@@ -103,7 +103,7 @@ and open the template in the editor.
 </table>
 <center>
     <br></br>
-    <h:commandButton class="btn btn-success" value="Post" action="#{addhobby.setHobby()}" onclick="loginSuccess.xhtml">
+    <h:commandButton class="btn btn-success" value="Post" action="#{addhobby.setHobby()}" onclick = "alert('Posted! Go Back to View');">
     </h:commandButton>
     <br></br>
     <br></br>
