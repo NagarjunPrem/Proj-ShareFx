@@ -1,7 +1,11 @@
 # Proj-ShareFx
 clone this project from : https://github.com/NagarjunPrem/Proj-ShareFx.git
 
-Architecture Diagram : 
+Application Architecture Diagram : https://github.com/NagarjunPrem/Proj-ShareFx/blob/main/Architecture%20and%20Essentials/sharefx-Architecture_1.jpg
+Application Use Case : https://github.com/NagarjunPrem/Proj-ShareFx/blob/main/Architecture%20and%20Essentials/sharefx-usecase_1.jpg
+Application Navigation : https://github.com/NagarjunPrem/Proj-ShareFx/tree/main/Architecture%20and%20Essentials/navigation
+
+Final Report : 
 
 To start the project-
 
